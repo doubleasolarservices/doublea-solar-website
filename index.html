@@ -399,4 +399,50 @@ function calc() {
   let u = +document.getElementById('u').value;
   let p = +document.getElementById('p').value;
   let e = +document.getElementById('e').value / 100;
-  let t = +document.getElementById('t').value
+  let t = +document.getElementById('t').value / 100;
+
+  if (!(u > 0 && p > 0 && e > 0 && e <= 1 && t > 0 && t <= 1)) {
+    document.getElementById('cap').textContent = 'Check inputs';
+    document.getElementById('out').textContent =
+      'Please enter valid values.';
+    return;
+  }
+
+  let k = u * t / (30 * p * e);
+
+  document.getElementById('cap').textContent =
+    k.toFixed(2) + ' kW';
+
+  document.getElementById('out').textContent =
+    'Target monthly production: ' + (u * t).toFixed(2) + ' kWh';
+}
+
+function inq() {
+  let n = document.getElementById('n').value.trim();
+  let c = document.getElementById('c').value.trim();
+  let s = document.getElementById('s').value;
+  let msg = document.getElementById('msg').value.trim();
+
+  if (!n || !c) {
+    document.getElementById('status').textContent =
+      'Please enter your name and contact details.';
+    return;
+  }
+
+  let subject = encodeURIComponent('Solar Inquiry - ' + n);
+
+  let body = encodeURIComponent(
+    'Name: ' + n +
+    '\nContact: ' + c +
+    '\nService: ' + s +
+    '\nMessage: ' + msg
+  );
+
+  window.location.href =
+    'mailto:doubleasolar@gmail.com?subject=' + subject + '&body=' + body;
+}
+</script>
+
+</body>
+</html>
+```
