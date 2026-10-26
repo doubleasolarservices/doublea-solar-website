@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,6 +43,7 @@ header {
   width: 75px;
   height: 75px;
   object-fit: contain;
+  display: block;
 }
 nav {
   display: flex;
@@ -120,6 +121,7 @@ footer {
   line-height: 1.8;
 }
 footer .logo { width: 65px; height: 65px; }
+
 @media(max-width:700px) {
   .hero { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr 1fr; }
@@ -135,7 +137,7 @@ footer .logo { width: 65px; height: 65px; }
 
 <header>
   <div class="brand">
-    <img class="logo" src="DOUBLE%20A%20.png" alt="Double-A Solar Logo">
+    <img class="logo" src="./DOUBLE%20A%20.png" alt="Double-A Solar Logo">
     <div>
       DOUBLE-A SOLAR<br>
       <small>POWER ENGINEERING SERVICES</small>
@@ -306,7 +308,7 @@ footer .logo { width: 65px; height: 65px; }
 
 <footer class="wrap">
   <div class="brand">
-    <img class="logo" src="DOUBLE%20A%20.png" alt="Double-A Solar Logo">
+    <img class="logo" src="./DOUBLE%20A%20.png" alt="Double-A Solar Logo">
     <strong>DOUBLE-A SOLAR<br>POWER ENGINEERING SERVICES</strong>
   </div>
   <p>0945-964-0840</p>
@@ -348,22 +350,4 @@ function inq() {
 
   if (!n || !c) {
     document.getElementById('status').textContent =
-      'Please enter your name and contact details.';
-    return;
-  }
-
-  let subject = encodeURIComponent('Solar Inquiry - ' + n);
-  let body = encodeURIComponent(
-    'Name: ' + n +
-    '\nContact: ' + c +
-    '\nService: ' + s +
-    '\nMessage: ' + msg
-  );
-
-  window.location.href =
-    'mailto:doubleasolar@gmail.com?subject=' + subject + '&body=' + body;
-}
-</script>
-
-</body>
-</html>
+      'Please
