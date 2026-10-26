@@ -13,17 +13,21 @@
   --muted: #64748b;
   --cream: #fcf9f1;
 }
+
 * { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #27364a;
 }
+
 header, .wrap {
   max-width: 1100px;
   margin: auto;
   padding: 20px;
 }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -32,6 +36,7 @@ header {
   flex-wrap: wrap;
   border-bottom: 1px solid #eee;
 }
+
 .brand {
   display: flex;
   align-items: center;
@@ -39,19 +44,27 @@ header {
   color: var(--navy);
   font-weight: bold;
 }
+
 .logo {
   width: 75px;
   height: 75px;
   object-fit: contain;
   display: block;
 }
+
 nav {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
 }
-a { color: inherit; text-decoration: none; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 nav a:hover { color: var(--gold); }
+
 .btn {
   display: inline-block;
   background: var(--gold);
@@ -61,6 +74,7 @@ nav a:hover { color: var(--gold); }
   border-radius: 8px;
   cursor: pointer;
 }
+
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -69,38 +83,60 @@ nav a:hover { color: var(--gold); }
   padding-top: 55px;
   padding-bottom: 55px;
 }
+
 .hero img.banner {
   width: 100%;
   height: 320px;
   object-fit: cover;
   border-radius: 16px;
 }
-h1 { font-size: 48px; color: var(--navy); margin: 12px 0; }
-.gold { color: var(--gold); font-weight: bold; letter-spacing: 2px; }
-.muted { color: var(--muted); line-height: 1.7; }
+
+h1 {
+  font-size: 48px;
+  color: var(--navy);
+  margin: 12px 0;
+}
+
+.gold {
+  color: var(--gold);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.muted {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
+
 .card {
   border: 1px solid #eee;
   border-radius: 12px;
   padding: 20px;
 }
+
 .card h3, h2 { color: var(--navy); }
+
 section { padding: 35px 20px; }
+
 .est {
   background: var(--cream);
   padding: 22px;
   border-radius: 14px;
 }
+
 label {
   display: block;
   font-size: 13px;
   color: var(--muted);
   margin: 10px 0;
 }
+
 input, select, textarea {
   display: block;
   width: 100%;
@@ -109,24 +145,31 @@ input, select, textarea {
   border-radius: 7px;
   margin-top: 5px;
 }
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
+
 footer {
   border-top: 1px solid var(--gold);
   padding: 25px;
   color: var(--muted);
   line-height: 1.8;
 }
-footer .logo { width: 65px; height: 65px; }
+
+footer .logo {
+  width: 65px;
+  height: 65px;
+}
 
 @media(max-width:700px) {
   .hero { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr 1fr; }
   h1 { font-size: 38px; }
 }
+
 @media(max-width:450px) {
   .cards, .grid { grid-template-columns: 1fr; }
 }
@@ -137,7 +180,7 @@ footer .logo { width: 65px; height: 65px; }
 
 <header>
   <div class="brand">
-    <img class="logo" src="./DOUBLE%20A%20.png" alt="Double-A Solar Logo">
+    <img class="logo" src="./DoubleA.png" alt="Double-A Solar Logo">
     <div>
       DOUBLE-A SOLAR<br>
       <small>POWER ENGINEERING SERVICES</small>
@@ -169,8 +212,8 @@ footer .logo { width: 65px; height: 65px; }
   </div>
 
   <img class="banner"
-  src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1100&q=85"
-  alt="Solar panels">
+    src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1100&q=85"
+    alt="Solar panels">
 </div>
 
 <section class="wrap" id="services">
@@ -183,22 +226,27 @@ footer .logo { width: 65px; height: 65px; }
       <h3>On-Grid Solar</h3>
       <p class="muted">Grid-connected solar systems.</p>
     </div>
+
     <div class="card">
       <h3>Hybrid Solar</h3>
       <p class="muted">Solar with battery storage.</p>
     </div>
+
     <div class="card">
       <h3>Off-Grid Solar</h3>
       <p class="muted">Standalone solar solutions.</p>
     </div>
+
     <div class="card">
       <h3>Site Assessment</h3>
       <p class="muted">Roof, shading and electrical load assessment.</p>
     </div>
+
     <div class="card">
       <h3>System Design</h3>
       <p class="muted">Preliminary sizing and engineering planning.</p>
     </div>
+
     <div class="card">
       <h3>Installation Support</h3>
       <p class="muted">Installation coordination and after-sales support.</p>
@@ -226,12 +274,15 @@ footer .logo { width: 65px; height: 65px; }
       <label>Monthly consumption (kWh)
         <input id="u" type="number" value="821.66">
       </label>
+
       <label>Peak sun hours/day
         <input id="p" type="number" value="4.5" step=".1">
       </label>
+
       <label>System efficiency (%)
         <input id="e" type="number" value="80">
       </label>
+
       <label>Target offset (%)
         <input id="t" type="number" value="70">
       </label>
@@ -239,7 +290,9 @@ footer .logo { width: 65px; height: 65px; }
 
     <button class="btn" onclick="calc()">Calculate</button>
     <h2 id="cap">5.32 kW</h2>
-    <p class="muted" id="out">Estimated monthly production: 575.16 kWh</p>
+    <p class="muted" id="out">
+      Estimated monthly production: 575.16 kWh
+    </p>
   </div>
 
   <p class="muted">
@@ -257,26 +310,33 @@ footer .logo { width: 65px; height: 65px; }
     <p><strong>Contact Number:</strong>
       <a href="tel:09459640840">0945-964-0840</a>
     </p>
+
     <p><strong>Email:</strong>
       <a href="mailto:doubleasolar@gmail.com">doubleasolar@gmail.com</a>
     </p>
+
     <p><strong>Office Address:</strong><br>
       2nd Floor Karen Joy Bldg. Northern Poblacion,
       Calamba, Misamis Occidental
     </p>
+
     <p><strong>Facebook Page:</strong><br>
       <a class="btn"
-      href="https://www.facebook.com/profile.php?id=100093905913591"
-      target="_blank" rel="noopener">Visit Our Facebook Page</a>
+        href="https://www.facebook.com/profile.php?id=100093905913591"
+        target="_blank" rel="noopener">
+        Visit Our Facebook Page
+      </a>
     </p>
   </div>
 
   <h2>Request a Quote</h2>
+
   <div class="card">
     <div class="grid">
       <label>Full name
         <input id="n" placeholder="Your name">
       </label>
+
       <label>Email or phone
         <input id="c" placeholder="Contact details">
       </label>
@@ -298,6 +358,7 @@ footer .logo { width: 65px; height: 65px; }
     </label>
 
     <button class="btn" onclick="inq()">Send Inquiry via Email</button>
+
     <p class="muted" id="status">
       Your email application will open with your inquiry details.
     </p>
@@ -308,17 +369,28 @@ footer .logo { width: 65px; height: 65px; }
 
 <footer class="wrap">
   <div class="brand">
-    <img class="logo" src="./DOUBLE%20A%20.png" alt="Double-A Solar Logo">
-    <strong>DOUBLE-A SOLAR<br>POWER ENGINEERING SERVICES</strong>
+    <img class="logo" src="./DoubleA.png" alt="Double-A Solar Logo">
+    <strong>
+      DOUBLE-A SOLAR<br>
+      POWER ENGINEERING SERVICES
+    </strong>
   </div>
+
   <p>0945-964-0840</p>
   <p>doubleasolar@gmail.com</p>
-  <p>2nd Floor Karen Joy Bldg. Northern Poblacion,
-  Calamba, Misamis Occidental</p>
+
+  <p>
+    2nd Floor Karen Joy Bldg. Northern Poblacion,
+    Calamba, Misamis Occidental
+  </p>
+
   <p>
     <a href="https://www.facebook.com/profile.php?id=100093905913591"
-    target="_blank" rel="noopener">Facebook Page</a>
+      target="_blank" rel="noopener">
+      Facebook Page
+    </a>
   </p>
+
   <small>© 2026 Double-A Solar Power Engineering Services.</small>
 </footer>
 
@@ -327,27 +399,4 @@ function calc() {
   let u = +document.getElementById('u').value;
   let p = +document.getElementById('p').value;
   let e = +document.getElementById('e').value / 100;
-  let t = +document.getElementById('t').value / 100;
-
-  if (!(u > 0 && p > 0 && e > 0 && e <= 1 && t > 0 && t <= 1)) {
-    document.getElementById('cap').textContent = 'Check inputs';
-    document.getElementById('out').textContent =
-      'Please enter valid values.';
-    return;
-  }
-
-  let k = u * t / (30 * p * e);
-  document.getElementById('cap').textContent = k.toFixed(2) + ' kW';
-  document.getElementById('out').textContent =
-    'Target monthly production: ' + (u * t).toFixed(2) + ' kWh';
-}
-
-function inq() {
-  let n = document.getElementById('n').value.trim();
-  let c = document.getElementById('c').value.trim();
-  let s = document.getElementById('s').value;
-  let msg = document.getElementById('msg').value.trim();
-
-  if (!n || !c) {
-    document.getElementById('status').textContent =
-      'Please
+  let t = +document.getElementById('t').value
