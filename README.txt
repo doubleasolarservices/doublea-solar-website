@@ -1,0 +1,1 @@
+Upload index.html to the root of your GitHub repository. Enable GitHub Pages: Settings > Pages > Deploy from a branch > main > /(root) > Save. This is a static prototype; the inquiry form does not save data and there is no real admin login/database yet.
